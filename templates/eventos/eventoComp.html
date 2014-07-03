@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block contenido %}
+<style type="text/css">
+    img{width:100px;}
+</style>
+<label>LISTA DE PONENTES</label>
+  <li> <a href="/ponenteList/"class = "btn btn-primary" >Ver Ponentes</a></li>
+ <label>LISTA DE PARTICIPANTES</label> 
+  <li> <a href="/participantesList/"class = "btn btn-primary" >Ver Participantes</a></li>
+<table  class = "table" cellspacing = '0'>
+        <thead>
+            <th>Nombre del Evento</th>
+            <th>Fecha de inicio </th>
+            <th>Fecha final del evento </th>
+            <th>Area organizadora</th>
+            <th>Tipo de Evento</th>
+
+
+        </thead>
+        <tbody>
+            {% for evento in eventos %}
+            <tr class="success">
+                <td>{{evento.nombre}}</td>
+                <td>{{evento.fecha_inicio}}</td>
+                <td>{{evento.fecha_final}}</td>
+                <td>{{evento.area_organizadora}}</td>
+                <td>{{evento.tipo_evento}}</td>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class= "table" cellspacing = '0'>
+        <thead>
+            <th>Descripcion </th>
+            <th>tipo costo </th>
+            <th> monto</th>
+            <th> foto del evento</th>
+        </thead>
+        <tbody>
+            {% for evento in eventos %}
+            <tr class="success">
+                <td>{{evento.descripcion}}</td>
+                <td>{{evento.costo}}</td>
+                <td>{{evento.monto}}</td>
+                <td><img src="{{MEDIA_URL}}{{evento.imagen}}"></td>
+                {% empty %}
+            <tr>
+                <td> No hay Eventos Disponibles </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            <li><a href="/eventosAdd/"class = "btn btn-primary"
+                    >Agregar</a></li>
+            
+                <label>Regresar Atras </label>
+                <li> <a href="/eventosList/"class = "btn btn-primary"
+                        >Atras</a></li>
+{% endblock contenido %}

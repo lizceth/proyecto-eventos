@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}{{titulo}}{% endblock titulo %}
+{% block contenido %}
+<title>{{titulo}}</title>
+<ul>
+
+    {% for taller in taller %}
+    <li><a href='/facultadlist/{{taller.id}}'>{{taller.nombre}}</a></li>
+    <br>
+    {% endfor %}
+</ul>
+
+{% endblock contenido%}
+
+

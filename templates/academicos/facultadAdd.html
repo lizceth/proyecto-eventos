@@ -1,0 +1,12 @@
+{% extends "base.html"%}                                                             
+{% block contenido %}                                                            
+<form action = "" method="post"> {% csrf_token %}
+        <label >Nombre</label>
+        {{formulario.nombre}}                                                        
+        <label>Coordinador de Facultad</label>                                                      
+        {{formulario.coordinador_fac}}                                                      
+        <label>Escuela</label>                                                        
+        {{formulario.escuela}}                                                        
+        <button type="submit/button" name = ""  class="bt btn-warning">Guardar</button>
+</form> 
+{% endblock contenido%}

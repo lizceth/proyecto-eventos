@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block contenido %}
+<style type="text/css">        
+    img{width:100px;}
+</style>
+<li> <a href="/eventosListComp/"class = "btn btn-primary" >Ver Completo</a></li>
+<table  class = "table" cellspacing = '0'>
+        <thead>
+            <th>Nombre del Evento</th>
+            <th>Fecha de inicio </th>
+            <th>Fecha final del evento </th>
+            <th>Tipo de Evento</th>
+            <th> Tipo costo </th>
+            <th> monto</th>
+            <th>foto Evento</th>
+        </thead>
+        <tbody>
+            {% for evento in eventos %}
+            <tr class="success">
+                <td>{{evento.nombre}}</td>
+                <td>{{evento.fecha_inicio}}</td>
+                <td>{{evento.fecha_final}}</td>
+                <td>{{evento.tipo_evento}}</td>
+                <td>{{evento.costo}}</td>
+                <td>{{evento.monto}}</td>
+                <td><img src="{{MEDIA_URL}}{{evento.imagen}}"><td>
+                <td> <a href="/eventosEdit/{{evento.id}}"class = "btn btn-success" >Editar</a></td>
+                <td> <a href="/eventosBorrar/{{evento.id}}"class = "btn
+                        btn-danger" >Borrar</a></td>
+            {% empty %}
+            <tr>
+                <td> No hay Eventos Disponibles </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/eventosAdd/"class = "btn btn-primary" >Agregar</a>
+
+{% endblock contenido %}

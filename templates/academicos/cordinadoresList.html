@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block contenido %}
+<table  class = "table" cellspacing = '0'>
+        <thead>
+            <th>Persona</th>
+            <th>Tema de Ponencia</th>
+        </thead>
+        <tbody>
+            {% for coordinador in cordinadores %}
+            <tr class="success">
+                <td>{{coordinador.nombre}}</td>
+                <td>{{coordinador.tipo_coordinador}}</td>
+                <td> <a href="/cordinadorEdit/{{coordinador.id}}"class = "btn btn-success" >Editar</a></td>
+                <td> <a href="/cordinadorBorrar/{{coordinador.id}}"class = "btn
+                        btn-danger" >Borrar</a></td>
+            {% empty %}
+            <tr>
+                <td> No hay Personas Disponibles </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/cordinadoresAdd/ "class = "btn btn-primary" >Agregar</a>
+{% endblock contenido %}
+

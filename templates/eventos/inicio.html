@@ -1,0 +1,20 @@
+{% extends "base_principal.html" %}
+{% block contenido %}
+<style type="text/css"> 
+    img{width:800px;}
+</style>
+
+<body>
+
+    {% for evento in eventos %} 
+    <br>
+    <img src= "{{MEDIA_URL}}{{evento.imagen}}">
+    <h2>{{evento.nombre}}</h2>
+    <h5>{{evento.fecha_inicio}}</h5>
+    <a href='/detalle/{{evento.id}}'class='btn btn-primary'>ver detalles>></a>
+    <br>
+    {% empty %}
+    <li>No hay Eventos.</li>   
+    {% endfor %}
+
+{% endblock contenido %}

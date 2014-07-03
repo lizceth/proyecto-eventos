@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block contenido %}
+<table  class = "table" cellspacing = '0'>
+        <thead>
+            <th>Nombre de Escuela</th>
+            <th>Tema de Ponencia</th>
+        </thead>
+        <tbody>
+            {% for escuela in escuelas %}
+            <tr class="success">
+                <td>{{escuela.nombre}}</td>
+                <td>{{escuela.coordinador_esc}}</td>
+                <td> <a href="/escuelaEdit/{{escuela.id}}"class = "btn btn-success" >Editar</a></td>
+                <td> <a href="/escuelaBorrar/{{escuela.id}}"class = "btn
+                        btn-danger" >Borrar</a></td>
+            {% empty %}
+            <tr>
+                <td> No hay Escuelas Disponibles </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/escuelaAdd/"class = "btn btn-primary" >Agregar</a>
+{% endblock contenido %}
+

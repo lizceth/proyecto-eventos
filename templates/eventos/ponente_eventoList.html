@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block titulo %} {{titulo}} {% endblock titulo %}
+{% block contenido %}
+<body>
+
+    {% for ponente_eventos in ponente_evento %}
+    <li>{{ponente_evento.ponente}}</li>
+    <li>{{ponente_evento.inicio}}</li>
+    <li>{{ponente_evento.final}}</li>
+    <li>{{ponente_evento.evento}}</li>
+    <li><a href='/detalles/{{ponente_evento.id}}'>ver detalles>></a></li>
+    {% endfor %}
+</body>
+{% endblock contenido %}

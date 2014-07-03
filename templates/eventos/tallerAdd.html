@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block contenido %}
+<form action ="" method="post">{% csrf_token %}
+    <label>Evento </label>
+    {{formulario.evento}}
+    <label>Tema</label>
+    {{formulario.tema}}
+    <label>Actividad</label>
+    {{formulario.actividad}}
+    <button type="submit/button" name="" class="btn
+        btn-warning">Guardar</button>
+</form>
+{% endblock contenido %}
+

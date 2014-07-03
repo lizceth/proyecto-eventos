@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block contenido %}
+<table  class = "table" cellspacing = '0'>
+        <thead>
+            <th>Nombre de Facultad</th>
+            <th>Cordinador de Facultad</th>
+        </thead>
+        <tbody>
+            {% for facultad in facultades %}
+            <tr class="success">
+                <td>{{facultad.nombre}}</td>
+                <td>{{facultad.coordinador_fac}}</td>
+                <td>{{facultad.escuela}}</td>
+                <td> <a href="/facultadesEdit/{{facultad.id}}"class = "btn btn-success" >Editar</a></td>
+                <td> <a href="/facultadesBorrar/{{facultad.id}}"class = "btn
+                        btn-danger" >Borrar</a></td>
+            {% empty %}
+            <tr>
+                <td> No hay Escuelas Disponibles </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/facultadesAdd/"class = "btn btn-primary" >Agregar</a>
+{% endblock contenido %}

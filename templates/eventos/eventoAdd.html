@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block contenido %}
+<form id='formulario' method='post' enctype='multipart/form-data'>
+    {% csrf_token %}
+                {{formulario.as_p}}
+<button type="submit/button" name = ""  class ="btn btn-warning">Guardar</button>
+
+</form>
+{% endblock %}
+

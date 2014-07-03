@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block contenido %}
+<table  class = "table" cellspacing = '0'>
+        <thead>
+            <th>Tipo de participante</th>
+            <th>Nombre de persona</th>
+        </thead>
+        <tbody>
+            {% for participante in participantes %}
+            <tr class="success">
+                <td>{{participante.tipo_participante}}</td>
+                <td>{{participante.persona}}</td>
+                <td> <a href="/participantesEdit/{{participante.id}}"class = "btn btn-success" >Editar</a></td>
+                <td> <a href="/participantesBorrar/{{participante.id}}"class = "btn btn-danger" >Borrar</a></td>
+            {% empty %}
+            <tr>
+                <td> No hay Participantes Registrados  </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/participantesAdd/"class = "btn btn-primary" >Agregar</a>
+{% endblock contenido %}

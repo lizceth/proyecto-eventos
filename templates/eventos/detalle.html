@@ -1,0 +1,18 @@
+{% extends "base_principal.html" %}  
+{% block contenido %} 
+
+<style type="text/css">        
+    img{width:800px;}
+</style>
+<h1>{{evento.nombre}}</h1>
+<ul>
+    <img src="{{MEDIA_URL}}{{evento.imagen}}">
+    <p> <strong>Descripcion:</strong> {{evento.descripcion}}</p>
+    <p><strong>Fecha de inicio:</strong> {{evento.fecha_inicio}} </p>
+    <p><strong>Fecha final del evento:</strong> {{evento.fecha_final}} </p>
+    <p><strong>Tipo de Evento:</strong> {{evento.tipo_evento}}</p>
+    <p> <strong>Tipo costo : </strong>{{evento.costo}}</p>
+    <p><strong>Monto:</strong> {{evento.monto}}</p>
+    <p> <strong>Organizado por:</strong> {{evento.area_organizadora}}</p>
+</ul>
+{% endblock %}

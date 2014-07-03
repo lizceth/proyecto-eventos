@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block contenido %}
+<table  class = "table" cellspacing = '0'>
+        <thead>
+            <th>Integrantes</th>
+            <th>Comision</th>
+            <th>otros</th>
+        </thead>
+        <tbody>
+            {% for area_organizadora in area_organizadora %}
+            <tr class="success">
+                <td>{{area_organizadora.integrantes}}</td>
+                <td>{{area_organizadora.comision}}</td>
+                <td>{{area_organizadora.otros}}</td>
+                <td> <a href="/area_organizadoraEdit/{{area_organizadora.id}}"class = "btn btn-success" >Editar</a></td>
+                <td> <a href="/area_organizadoraBorrar/{{area_organizadora.id}}"class = "btn
+                        btn-danger" >Borrar</a></td>
+            {% empty %}
+            <tr>
+                <td> No hay Areas organizadoras  Disponibles por el momento </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/area_organizadoraAdd/"class = "btn btn-primary" >Agregar</a>
+{% endblock contenido %}
+
+  
+
+
+
+
