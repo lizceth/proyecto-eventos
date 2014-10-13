@@ -1,7 +1,7 @@
 €}q(Uusuarios.views]q(UindexqUcerrarqUnuevoqUborrarqUeditarqUusuarioqUprivadoq	Uingresarq
 eUacademicos.views]q(UCordinador_editqUEscuela_addqUFacultad_borrarqUEscuelas_borrarqU
 FacultadesqUEscuela_editqUFacultad_addqUFacultad_editqUEscuelasqUCordinador_addqUCordinadoresqUCordinador_borrarqeUEventoLandia.urls]qUurlpatternsqaUeventos.models]q(UEventoqUTallerqUPARTICIPANTEqUPonenteqUtipo_eventoqUCOSTOq U	ACTIVIDADq!UPonente_eventoq"UArea_organizadoraq#eUeventos.views]q$(Utallerq%UArea_org_borrarq&UArea_org_addq'Utaller_editq(U
-taller_addq)UEventos_addq*UEvento_borrarq+UEventosCompq,Usobreq-Uinicioq.UPon_Eve_borrarq/UPonente_editq0UPonente_borrarq1UArea_org_editq2UArea_organizadorasq3UEventosq4Utaller_borrarq5Uponente_addq6UPonente_eventosq7UPonentesq8Udetalleq9Upon_eve_addq:Upon_eve_editq;UEventos_editq<eUEventoLandia.settings]q=(U	DATABASESq>UMIDDLEWARE_CLASSESq?UROOT_URLCONFq@U
+taller_addq)UEventos_addq*UEvento_borrarq+UEventosCompq,Usobreq-Uinicioq.UPon_Eve_borrarq/UPonente_editq0UPonente_borrarq1UArea_org_editq2UArea_organizadorasq3UEventosq4Utaller_borrarq5Uponente_addq6UPonente_eventosq7UPonentesq8Udetalleq9Upon_eve_addq:Upon_eve_editq;UEventos_editq<eUusuarios.forms]UEventoLandia.settings]q=(U	DATABASESq>UMIDDLEWARE_CLASSESq?UROOT_URLCONFq@U
 IMAGES_URLqAULANGUAGE_CODEqBUUSE_I18NqCU
 SECRET_KEYqDUBASE_DIRqEUSTATIC_ROOTqFU	TIME_ZONEqGUWSGI_APPLICATIONqHUALLOWED_HOSTSqIUTEMPLATE_DIRSqJUIMAGES_ROOTqKU
 STATIC_URLqLUUSE_L10NqMUDEBUGqNUUSE_TZqOUINSTALLED_APPSqPU

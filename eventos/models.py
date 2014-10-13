@@ -59,25 +59,6 @@ class Evento(models.Model):
     monto=models.FloatField( default=0.00 )
     def __unicode__(self):
         return '%s -- %s' %(self.nombre, self.tipo_evento)
-"""
-    def ultimos_eventos(self):
-        mes=timezone.now().month
-        reciente=Evento.objects.get(fecha_inicio__month=mes)
-        return reciente
-
-    def evento(self):
-        return self.nombre
-
-    def ponente(self):
-        return self.ponente.nombre
-
-    def tipo_evento(self):
-        return self.tipo_evento
-
-    def area_organizadora(self):
-        return self.area_organizadora.comision
-"""
-
 
 
 class Taller(models.Model):
